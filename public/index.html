@@ -10,6 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
  
+
     <style>
       body {
         min-height: 2000px;
@@ -21,10 +22,16 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <div class="navbar-brand" href="#/">IS Project</div>
+<div id = "banner">
+    <h3>&nbsp&nbsp&nbsp&nbspContact Management</h3>
+        <div id  = "bannerbuttons">
+            <button id = "gohome">
+                <a href="/list" class="fa fa-list">Index</a>        
+            </button>
+            <button id = "addnew">
+                <a href="/contact-form" class="fa fa-plus-square" aria-hidden="true">New</a>
+            </button>
+        </div>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
