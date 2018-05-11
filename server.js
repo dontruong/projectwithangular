@@ -58,7 +58,7 @@ app.post("/contacts", function(req, res) {
   var newContact = req.body;
   newContact.createDate = new Date();
 
-  if (!(req.body.firstName)) {
+  if (!(req.body.Name)) {
     handleError(res, "Invalid user input", "Must provide name.", 400);
   }
 
