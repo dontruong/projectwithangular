@@ -61,7 +61,16 @@ app.post("/contacts", function(req, res) {
   if (!(req.body.Name)) {
     handleError(res, "Invalid user input", "Must provide name.", 400);
   }
-
+  var emailregex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  if (emailregex.test(user.email) == false) {
+      alert('Email is invalid');
+      return false;
+  }
+  var phoneregex = /^((?![0-1])[0-9]{10})$/g;
+  if(phoneregex.test(user.phone) == false){
+      alert("Phone number must be 10 numbers long and cannot start with 0 or 1");
+      return false;
+  }
   db.collection(CONTACTS_COLLECTION).insertOne(newContact, function(err, doc) {
     if (err) {
       handleError(res, err.message, "Failed to create new contact.");
