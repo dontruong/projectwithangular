@@ -1,8 +1,6 @@
 <div class = "row">
     <div class="col-md-6">
-      <h2>
-    {{ contact.Name }}
-      </h2>
+
     </div>
     <div class="col-md-3">
     </div>
@@ -14,6 +12,7 @@
   </div>
   <div ng-hide="editMode" class="container">
     <div>
+      <p ng-if="contact.name">name: {{ contact.Name }} </p>
       <p ng-if="contact.email">email: <a ng-href="mailto:{{ contact.email }}" target="_blank">{{ contact.email }}</a></p>
       <p ng-if="contact.phone">phone: {{ contact.phone }} </p>
       <p>
