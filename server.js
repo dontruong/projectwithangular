@@ -66,7 +66,7 @@ app.post("/contacts", function(req, res) {
   }
   if ((req.body.email)!= /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/) {
     handleError(res, "Invalid user input", "Must provide name.", 400);
-
+  }
 
   db.collection(CONTACTS_COLLECTION).insertOne(newContact, function(err, doc) {
     if (err) {
