@@ -1,7 +1,7 @@
-#banner h3 {
+#banner {
+    height: 50px;
+    width: 100%;
+    background-color: dodgerblue;
     margin: 0;
-    padding-top:10px;
-    color: white;
     display:inline-block;
-    font-size: 20px;
 }
