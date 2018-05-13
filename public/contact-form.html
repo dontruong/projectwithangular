@@ -3,24 +3,25 @@
         <h2>Create new contact</h2>
     </div>
   </div>
-  <p>
-        <button style="margin-top:20px" class="btn btn-default" ng-click="saveContact(contact)">Save</button>
-        <button style="margin-top:20px" class="btn btn-default" ng-click="back()">Back</button>
-      </p>
+  
   <div class="container">     
 
     <div>
+        <p>
+        <button style="margin-top:20px" class="btn btn-default" ng-click="saveContact(contact)">Save</button>
+        <button style="margin-top:20px" class="btn btn-default" ng-click="back()">Back</button>
+      </p>
       <p>
         <label>Name (required)</label> 
         <input id="name" class="form-control" type="text" ng-model="contact.Name" required> 
       </p>
       <p>
         <label>Email (required)</label> 
-        <input id="name" class="form-control" type="text" ng-model="contact.email" required> 
+        <input id="email" class="form-control" type="text" ng-model="contact.email" required> 
       </p>
       <p>
         <label>Phone</label> 
-        <input id="name" class="form-control" type="text" ng-model="contact.phone"> 
+        <input id="phone" class="form-control" type="text" ng-model="contact.phone"> 
       </p>
 
  

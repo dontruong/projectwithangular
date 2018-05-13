@@ -3,12 +3,14 @@ var path = require("path");
 var bodyParser = require("body-parser");
 var mongodb = require("mongodb");
 var ObjectID = mongodb.ObjectID;
+var validator = require("express-validator");
 
 var CONTACTS_COLLECTION = "contacts";
 
 var app = express();
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
+app.use(expressValidator());
 
 // Create a database variable outside of the database connection callback to reuse the connection pool in your app.
 var db;
@@ -58,9 +60,13 @@ app.post("/contacts", function(req, res) {
   var newContact = req.body;
   newContact.createDate = new Date();
 
+
   if (!(req.body.Name)) {
     handleError(res, "Invalid user input", "Must provide name.", 400);
   }
+  if ((req.body.email)!= /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/) {
+    handleError(res, "Invalid user input", "Must provide name.", 400);
+
 
   db.collection(CONTACTS_COLLECTION).insertOne(newContact, function(err, doc) {
     if (err) {

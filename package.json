@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "body-parser": "^1.13.3",
+    "email-validator": "^2.0.3",
     "express": "^4.13.3",
-    "mongodb": "^2.1.6"
+    "mongodb": "^2.1.6",
+    "validator": "^10.2.0"
   }
 }
