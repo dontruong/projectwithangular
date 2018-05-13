@@ -3,11 +3,12 @@
         <h2>Create new contact</h2>
     </div>
   </div>
+  <p>
+        <button style="margin-top:20px" class="btn btn-default" ng-click="saveContact(contact)">Save</button>
+        <button style="margin-top:20px" class="btn btn-default" ng-click="back()">Back</button>
+      </p>
   <div class="container">     
-      <div id  = "bannerbuttons">
-        <button id="gohome" ><a class="fa fa-list" ng-click="saveContact(contact)">Save</a></button>
-        <button id = "addnew"><a class="fa fa-plus-square"  ng-click="back()">Back</a></button>
-      </div>
+
     <div>
       <p>
         <label>Name (required)</label> 

@@ -1,29 +1,26 @@
 
 <div class = "row">
-    <div class="col-md-6">
-      <h2>
-        Contacts
-      </h2>
-    </div>
-    <div class="col-md-3">
-    </div>
-    <div class="container">     
-            <div id  = "bannerbuttons">
-              <button id="gohome" ><a class="fa fa-list" ng-click="saveContact(contact)">Save</a></button>
-              <button id = "addnew"><a class="fa fa-plus-square"  ng-click="back()">new</a></button>
-            </div>
-          <div>
-    <div class="col-md-1">
-    </div>
-  </div>
-  <div class="container">
-    <table class="table table-hover">
-      <tbody>
-        <tr ng-repeat="contact in contacts | orderBy:'Name'" style="cursor:pointer">
-          <td>
-            <a ng-href="#/contact/{{contact._id}}">{{ contact.Name }}</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+        <div class="col-md-6">
+          <h2>
+            Contacts
+          </h2>
+        </div>
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-2">
+          <a style="margin-top:20px" class="btn btn-default" href="#/new/contact">New</a>
+        </div>
+        <div class="col-md-1">
+        </div>
+      </div>
+      <div class="container">
+        <table class="table table-hover">
+          <tbody>
+            <tr ng-repeat="contact in contacts | orderBy:'lastName'" style="cursor:pointer">
+              <td>
+                <a ng-href="#/contact/{{contact._id}}">{{ contact.Name }} </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
